@@ -2,67 +2,116 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Configurações básicas e metatags para acessibilidade e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Vincula o arquivo CSS para estilização do site -->
     <link rel="stylesheet" href="styles.css">
     
+    <!-- Pré-conexão para carregar fontes do Google de forma mais rápida -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <!-- Fonte "Chakra Petch" do Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
         
+    <!-- Título da página atualizado para o tema -->
     <title>Sentinela dos Mares: Tecnologia e Oceanos</title>
 </head>
 
 <body>
+    <!-- Cabeçalho principal do site -->
     <header>Projeto Sentinela dos Mares</header>
 
+    <!-- Seção principal que agrupa todo o conteúdo do projeto -->
     <section class="chamada">
         
         <div class="chamada-texto">
             <h1>Inovação a Serviço da Vida Marinha</h1>
             
+            <!-- Texto Introdutório -->
             <h2>Introdução</h2>
             <p>A humanidade enfrenta um desafio monumental: a poluição dos oceanos. Milhões de toneladas de plástico e outros detritos ameaçam a vida marinha, os ecossistemas e a nossa própria saúde. A vastidão azul, que sempre foi fonte de vida e inspiração, agora clama por socorro.</p>
             
-            <h2>O Problema</h2>
-            <p>O grande problema é a dificuldade de coletar eficientemente o lixo que já está disperso nos oceanos, especialmente em alto-mar. Além disso, a maior parte do plástico que entra nos oceanos vem dos rios. Isso exige uma abordagem que atue tanto na prevenção (nos rios) quanto na remediação (nos oceanos).</p>
-            
+            <!-- Quiz Interativo sobre o Tema -->
+            <h2>Teste seus Conhecimentos</h2>
+            <div class="quiz-container">
+                <!-- Pergunta 1 -->
+                <div class="pergunta">
+                    <p>1. Qual tecnologia é usada para mapear as áreas de maior concentração de lixo nos oceanos?</p>
+                    <div class="opcoes">
+                        <label><input type="radio" name="q1" value="a"> a) Satélites meteorológicos</label>
+                        <label><input type="radio" name="q1" value="b"> b) Drones com Inteligência Artificial</label>
+                        <label><input type="radio" name="q1" value="c"> c) Sonar de navios de pesca</label>
+                    </div>
+                    <button class="botao-verificar" onclick="verificarResposta(1, 'b')">Verificar</button>
+                    <span id="resultado1" class="resultado"></span>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="pergunta">
+                    <p>2. Onde as "Barreiras Flutuantes Inteligentes" são instaladas para maior eficácia?</p>
+                    <div class="opcoes">
+                        <label><input type="radio" name="q2" value="a"> a) Em alto-mar</label>
+                        <label><input type="radio" name="q2" value="b"> b) Na costa das praias</label>
+                        <label><input type="radio" name="q2" value="c"> c) Em rios, antes de chegarem ao mar</label>
+                    </div>
+                    <button class="botao-verificar" onclick="verificarResposta(2, 'c')">Verificar</button>
+                    <span id="resultado2" class="resultado"></span>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="pergunta">
+                    <p>3. Qual a principal fonte de energia dos Navios Coletores Autônomos?</p>
+                    <div class="opcoes">
+                        <label><input type="radio" name="q3" value="a"> a) Energia solar</label>
+                        <label><input type="radio" name="q3" value="b"> b) Diesel</label>
+                        <label><input type="radio" name="q3" value="c"> c) Energia nuclear</label>
+                    </div>
+                    <button class="botao-verificar" onclick="verificarResposta(3, 'a')">Verificar</button>
+                    <span id="resultado3" class="resultado"></span>
+                </div>
+
+                <!-- Pergunta 4 -->
+                <div class="pergunta">
+                    <p>4. Qual profissional é essencial para garantir que as operações de limpeza não prejudiquem a fauna marinha?</p>
+                    <div class="opcoes">
+                        <label><input type="radio" name="q4" value="a"> a) Engenheiro de Software</label>
+                        <label><input type="radio" name="q4" value="b"> b) Gerente de Projetos</label>
+                        <label><input type="radio" name="q4" value="c"> c) Biólogo Marinho</label>
+                    </div>
+                    <button class="botao-verificar" onclick="verificarResposta(4, 'c')">Verificar</button>
+                    <span id="resultado4" class="resultado"></span>
+                </div>
+
+                <!-- Pergunta 5 -->
+                <div class="pergunta">
+                    <p>5. A abordagem do projeto "Sentinela dos Mares" atua em quais frentes?</p>
+                    <div class="opcoes">
+                        <label><input type="radio" name="q5" value="a"> a) Apenas na prevenção em rios</label>
+                        <label><input type="radio" name="q5" value="b"> b) Apenas na remediação em oceanos</label>
+                        <label><input type="radio" name="q5" value="c"> c) Tanto na prevenção (rios) quanto na remediação (oceanos)</label>
+                    </div>
+                    <button class="botao-verificar" onclick="verificarResposta(5, 'c')">Verificar</button>
+                    <span id="resultado5" class="resultado"></span>
+                </div>
+            </div>
+
+            <!-- Solução Tecnológica -->
             <h2>Nossa Solução Tecnológica: Sentinela dos Mares</h2>
-            <p>Nossa solução é um sistema integrado e autônomo de limpeza oceânica. Ele é composto por três tecnologias principais que trabalham em conjunto:</p>
-            <h3>1. Drones de Mapeamento</h3>
-            <p>Drones aéreos e subaquáticos, equipados com Inteligência Artificial, que identificam e mapeiam as áreas de maior concentração de lixo em tempo real.</p>
-            <h3>2. Barreiras Flutuantes Inteligentes</h3>
-            <p>Barreiras posicionadas em rios para interceptar o plástico antes que ele chegue ao mar, usando a própria correnteza para concentrar os detritos de forma eficiente.</p>
-            <h3>3. Navios Coletores Autônomos</h3>
-            <p>Uma frota de embarcações movidas a energia solar que viajam para os pontos mapeados pelos drones para coletar o lixo da superfície, usando redes e sistemas de sucção seletiva para não prejudicar a vida marinha.</p>
+            <p>Nossa solução é um sistema integrado e autônomo de limpeza oceânica composto por Drones de Mapeamento, Barreiras Flutuantes Inteligentes e Navios Coletores Autônomos.</p>
             
+            <!-- Profissionais Envolvidos -->
             <h2>Profissionais Envolvidos na Solução</h2>
-            <p>Para um projeto desta magnitude, uma equipe multidisciplinar é essencial:</p>
-            <ul>
-                <li><strong>Engenheiros Mecânicos e Navais:</strong> Projetam e constroem os navios coletores e as barreiras flutuantes.</li>
-                <li><strong>Engenheiros de Software e Cientistas de Dados:</strong> Desenvolvem a IA dos drones, os sistemas de navegação autônoma e a plataforma de dados.</li>
-                <li><strong>Engenheiros Ambientais:</strong> Garantem que a solução não cause impactos negativos ao ecossistema e definem os melhores locais para as barreiras.</li>
-                <li><strong>Biólogos Marinhos:</strong> Analisam o impacto do lixo e garantem a segurança da fauna durante as operações de limpeza.</li>
-                <li><strong>Gerentes de Projeto:</strong> Coordenam todas as equipes para garantir que o projeto seja executado com sucesso.</li>
-            </ul>
+            <p>Para um projeto desta magnitude, uma equipe multidisciplinar é essencial, incluindo Engenheiros (Mecânicos, Navais, de Software, Ambientais), Cientistas de Dados, Biólogos Marinhos e Gerentes de Projeto.</p>
         </div>
     </section>
 
-    <section class="categoria">
-        <h2>Mais sobre a Limpeza dos Oceanos</h2>
-        <div class="categoria-videos">
-            <a href="https://www.youtube.com/watch?v=Tcy_QYXPhsY" target="_blank">
-                <img src="https://s2-g1.glbimg.com/iXpRxMsLZQ4eHBTnS3Zb_FZkdS8=/0x0:1116x1051/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/t/z/Mgwa2zQV6j9WqeAievEw/man-hand-picking-up-trash-plastic-bottle-by-beach-while-holding-blue-garbage-bag.jpg" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=l7jsN87m3FY" target="_blank">
-                <img src="https://s2-g1.glbimg.com/EqPy-yZreHUEKBraRye66hPVso8=/0x0:640x360/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/D/L/3TTBiTSleA0j0xTMhXAQ/plastico1.jpg" />
-            </a>
-        </div>
-    </section>
+    <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>
