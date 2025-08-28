@@ -31,6 +31,19 @@ header {
     max-width: 800px;
 }
 
+/* Adicionando estilo básico para a lista de profissionais */
+.chamada-texto ul {
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+    padding: 0;
+    text-align: left; /* Alinha o texto da lista à esquerda */
+    margin-top: 20px;
+}
+
+.chamada-texto li {
+    margin-bottom: 10px; /* Adiciona espaço entre os itens da lista */
+    font-size: 1.1rem;
+}
+
 .chamada-texto h1 {
     font-size: 3rem;
     color: #a4c9b3;
@@ -41,26 +54,6 @@ header {
     font-size: 1.2rem;
     color: #d1e8d9;
     margin-bottom: 30px;
-}
-
-.chamada-imagens {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.chamada-img {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-}
-
-.chamada-img:hover {
-    transform: scale(1.05);
 }
 
 /* Seção de categoria de vídeos */
