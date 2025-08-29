@@ -94,6 +94,19 @@ header {
     color: #F44336; /* Vermelho */
 }
 
+/* Estilos para a lista de profissionais */
+.chamada-texto ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.chamada-texto li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
 
 .chamada-texto h1, .chamada-texto h2, .chamada-texto h3 {
     color: #a4c9b3;
